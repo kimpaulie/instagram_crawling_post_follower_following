@@ -7,7 +7,7 @@ df=pd.read_excel(where_file, 'Sheet1', index_col=None, na_values=['NA'])
 
 # 엑셀의 2번째 줄부터(1번째 줄은 col로 설정) 불러와서 정보 parsing
 for i in range(len(df)):
-    url=df.iloc[i, 0         # 첫 열의 첫 줄부터 순서대로 처리
+    url=df.iloc[i,0]         # 첫 열의 첫 줄부터 순서대로 처리
     instaid=url.split('/')[3]         # 인스타 아이디 분리
     text = requests.get(url).text        # html 코드 받기
 
